@@ -1,8 +1,30 @@
-# React + Vite
+# React Heroes App con Rutas Privadas y Públicas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación de React que gestiona rutas privadas y públicas utilizando `react-router-dom`. La aplicación está diseñada para una administración simple de usuarios, con autenticación y autorización básica para acceder a diferentes partes de la aplicación.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Rutas Privadas**: Permite el acceso a ciertas páginas solo si el usuario está autenticado.
+- **Rutas Públicas**: Las páginas públicas, como la de login, son accesibles para los usuarios no autenticados. Los usuarios autenticados son redirigidos a la página principal.
+- **Protección de Rutas**: Implementación de protección de rutas mediante componentes de orden superior (`PrivateRoute` y `PublicRoute`).
+- **Autenticación con LocalStorage**: La autenticación de usuarios se gestiona mediante `localStorage` para mantener la sesión del usuario.
+
+## Tecnologías Utilizadas
+
+- **React**: Librería de JavaScript para construir interfaces de usuario.
+- **React Router**: Para el manejo de rutas y navegación.
+- **Context API**: Para la gestión del estado global de la autenticación.
+- **useReducer Hook**: Para manejar el estado de autenticación mediante un reducer.
+
+## Requisitos Previos
+
+- Node.js (>= 14.x)
+- npm o yarn
+
+## Instalación
+
+1. Clona el repositorio en tu máquina local:
+
+   ```bash
+   git clone https://github.com/tu-usuario/react-heroes-app.git
+   cd react-heroes-app
